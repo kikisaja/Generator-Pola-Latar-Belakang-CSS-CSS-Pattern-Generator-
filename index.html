@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pattern Generator 🏁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">qqsaja</span>
+            <h1>🏁 CSS PATTERN GENERATOR</h1>
+            <p>Buat pola latar belakang CSS instan & salin kodenya!</p>
+        </header>
+
+        <!-- Area Preview Pola -->
+        <section id="pattern-preview" class="preview-box">
+            <span class="preview-tag">PREVIEW</span>
+        </section>
+
+        <!-- Form Kontrol Pola -->
+        <div class="control-panel">
+            
+            <!-- Pilih Jenis Pola -->
+            <div class="control-group">
+                <label for="pattern-type">Pilih Jenis Pola</label>
+                <select id="pattern-type" class="select-input">
+                    <option value="dots">Titik-Titik (Dots)</option>
+                    <option value="stripes">Garis-Garis (Stripes)</option>
+                    <option value="checkerboard">Papan Catur (Checkerboard)</option>
+                </select>
+            </div>
+
+            <!-- Ukuran Pola -->
+            <div class="control-group">
+                <div class="label-with-val">
+                    <label for="pattern-size">Ukuran Pola</label>
+                    <span id="size-val" class="val-badge">20px</span>
+                </div>
+                <input type="range" id="pattern-size" min="10" max="80" value="20" class="range-input">
+            </div>
+
+            <!-- Pilih Warna -->
+            <div class="picker-grid">
+                <div class="picker-group">
+                    <label for="bg-color">Warna Latar</label>
+                    <input type="color" id="bg-color" value="#facc15">
+                </div>
+                <div class="picker-group">
+                    <label for="pattern-color">Warna Pola</label>
+                    <input type="color" id="pattern-color" value="#0f172a">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Output Kode CSS -->
+        <div class="code-section">
+            <label>Kode CSS Result</label>
+            <div class="code-wrapper">
+                <textarea id="css-output" readonly></textarea>
+                <button id="btn-copy" class="btn btn-copy">📋 SALIN CSS</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
